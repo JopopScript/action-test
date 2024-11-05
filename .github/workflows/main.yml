@@ -1,0 +1,16 @@
+on:
+  push:
+    branches:
+      - main  # or any branch you want to monitor
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up environment
+      run: |
+        echo hello
+        # Add setup commands here
