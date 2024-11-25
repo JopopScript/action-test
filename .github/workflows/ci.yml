@@ -1,0 +1,16 @@
+name: self-hosted-test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: [self-hosted]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo "This job runs on a self-hosted runner!"
